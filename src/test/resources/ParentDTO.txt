@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "name": "name1",
+  "amount": 11,
+  "date": 1703527235717,
+  "count": 111,
+  "isTest": true,
+  "prevId": 1111,
+  "index": 11111,
+  "roles": [
+    "111111"
+  ],
+  "superParentDTO": {
+    "id": 2,
+    "name": "name2",
+    "amount": 22,
+    "date": 1703527235717,
+    "count": 222,
+    "isTest": true,
+    "prevId": 2222,
+    "index": 22222,
+    "roles": [
+      "222222"
+    ]
+  },
+  "childDTOs": [
+    {
+      "id": 3,
+      "name": "name3",
+      "amount": 33,
+      "date": 1703527235717,
+      "count": 333,
+      "isTest": true,
+      "prevId": 3333,
+      "index": 33333,
+      "roles": [
+        "333333"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "name4",
+      "amount": 44,
+      "date": 1703527235717,
+      "count": 444,
+      "isTest": true,
+      "prevId": 4444,
+      "index": 44444,
+      "roles": [
+        "444444"
+      ]
+    }
+  ]
+}

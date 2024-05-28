@@ -1,0 +1,54 @@
+{
+  "id": 5,
+  "name": "name5",
+  "amount": 55,
+  "date": 1703527329172,
+  "count": 555,
+  "isTest": false,
+  "prevId": 5555,
+  "index": 55555,
+  "roles": [
+    "555555"
+  ],
+  "superParentJDO": {
+    "id": 6,
+    "name": "name6",
+    "amount": 66,
+    "date": 1703527329172,
+    "count": 666,
+    "isTest": false,
+    "prevId": 6666,
+    "index": 66666,
+    "roles": [
+      "666666"
+    ]
+  },
+  "childJDOs": [
+    {
+      "id": 7,
+      "name": "name7",
+      "amount": 77,
+      "date": 1703527329172,
+      "count": 777,
+      "isTest": false,
+      "prevId": 7777,
+      "index": 77777,
+      "roles": [
+        "777777"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "name8",
+      "amount": 88,
+      "date": 1703527329172,
+      "count": 888,
+      "isTest": false,
+      "prevId": 8888,
+      "index": 88888,
+      "roles": [
+        "888888"
+      ]
+    }
+  ]
+}
