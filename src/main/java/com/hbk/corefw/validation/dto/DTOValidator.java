@@ -10,6 +10,7 @@ import com.hbk.corefw.validation.field.validator.IFieldValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.util.Pair;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.lang.annotation.Annotation;
@@ -20,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class DTOValidator extends AbstractObjectMapper {
 
     private Logger logger = LoggerFactory.getLogger(DTOValidator.class);

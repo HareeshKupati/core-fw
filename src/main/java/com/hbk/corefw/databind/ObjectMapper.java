@@ -9,4 +9,5 @@ public interface ObjectMapper {
 
     <JDO extends CoreJDO, DTO extends CoreDTO> DTO convertToDTO(JDO jdo);
 
+    <DTO extends CoreDTO> void copyNonNullFields(DTO from, DTO to);
 }

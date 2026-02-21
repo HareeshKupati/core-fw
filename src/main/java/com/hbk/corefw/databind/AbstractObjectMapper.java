@@ -14,7 +14,7 @@ import java.util.Optional;
 
 public abstract class AbstractObjectMapper {
 
-    private Logger logger = LoggerFactory.getLogger(AbstractObjectMapper.class);
+    private final Logger logger = LoggerFactory.getLogger(AbstractObjectMapper.class);
 
     public static final String GET = "get";
     public static final String SET = "set";
