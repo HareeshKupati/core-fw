@@ -11,7 +11,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.util.MultiValueMap;
 
 import java.util.List;
-import java.util.Map;
 
 public interface ICoreService<DTO extends CoreDTO, JDO extends CoreJDO, ID, RP extends CoreRepository<JDO, ID>> {
     public DTO get(ID id) throws ResourceNotFoundException;
@@ -24,7 +23,7 @@ public interface ICoreService<DTO extends CoreDTO, JDO extends CoreJDO, ID, RP e
 
     public DTO update(ID id, DTO dto) throws ResourceNotFoundException, ValidationException;
 
-    public void mapToDTO(JDO jdo,DTO dto);
+    public void mapToDTO(JDO jdo, DTO dto);
 
     public void mapToJDO(DTO dto, JDO jdo);
 

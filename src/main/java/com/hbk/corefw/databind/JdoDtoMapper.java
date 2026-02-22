@@ -74,7 +74,7 @@ public class JdoDtoMapper extends AbstractObjectMapper implements ObjectMapper {
                 }
             } catch (NoSuchFieldException | IllegalAccessException | NoSuchMethodException |
                      InvocationTargetException e) {
-                logger.error("Error while copying value from {0} of {1} class to {2} class.", srcField.getName(), srcClass, destClass);
+                logger.error("Error while copying value from {} of {} class to {} class.", srcField.getName(), srcClass, destClass);
             }
         }
         if (!Object.class.equals(srcClass.getSuperclass())) {
@@ -124,7 +124,7 @@ public class JdoDtoMapper extends AbstractObjectMapper implements ObjectMapper {
                 }
             } catch (NoSuchFieldException | IllegalAccessException | NoSuchMethodException |
                      InvocationTargetException e) {
-                logger.error("Error while copying value from {0} of {1} class to {2} class.", srcField.getName(), srcClass, destClass);
+                logger.error("Error while copying value from {} of {} class to {} class.", srcField.getName(), srcClass, destClass);
             }
         }
         if (!Object.class.equals(srcClass.getSuperclass())) {
