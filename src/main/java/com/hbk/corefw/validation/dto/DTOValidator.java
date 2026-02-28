@@ -87,7 +87,7 @@ public class DTOValidator extends AbstractObjectMapper {
     }
 
     private Error buildError(String fieldName, String value, String message) {
-        return new Error(CoreConstants.BAD_REQUEST, String.format(message, fieldName), fieldName, value, FieldLocation.BODY);
+        return new Error(String.format(message, fieldName), fieldName, value, FieldLocation.BODY);
     }
 
     private String getFieldName(Field srcField, Field parentField, Integer index) {

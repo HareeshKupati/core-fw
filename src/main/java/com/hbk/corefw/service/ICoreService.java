@@ -13,15 +13,15 @@ import org.springframework.util.MultiValueMap;
 import java.util.List;
 
 public interface ICoreService<DTO extends CoreDTO, JDO extends CoreJDO, ID, RP extends CoreRepository<JDO, ID>> {
-    public DTO get(ID id) throws ResourceNotFoundException;
+    public DTO get(ID id);
 
     public Page<DTO> getAll(Pageable pageable, MultiValueMap<String, String> multiValueMap);
 
-    public DTO create(DTO dto) throws ValidationException;
+    public DTO create(DTO dto);
 
-    public void delete(ID id) throws ResourceNotFoundException;
+    public void delete(ID id);
 
-    public DTO update(ID id, DTO dto) throws ResourceNotFoundException, ValidationException;
+    public DTO update(ID id, DTO dto);
 
     public void mapToDTO(JDO jdo, DTO dto);
 

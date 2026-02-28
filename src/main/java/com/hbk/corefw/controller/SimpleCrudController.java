@@ -1,8 +1,6 @@
 package com.hbk.corefw.controller;
 
 import com.hbk.corefw.dto.CoreDTO;
-import com.hbk.corefw.exception.ResourceNotFoundException;
-import com.hbk.corefw.exception.ValidationException;
 import com.hbk.corefw.jdo.CoreJDO;
 import com.hbk.corefw.repository.CoreRepository;
 import com.hbk.corefw.service.ICoreService;
@@ -18,7 +16,8 @@ import java.util.List;
 
 import static com.hbk.corefw.util.CoreConstants.*;
 
-public class SimpleCrudController<DTO extends CoreDTO, JDO extends CoreJDO, ID, RP extends CoreRepository<JDO, ID>, S extends ICoreService<DTO, JDO, ID, RP>> {
+public abstract class SimpleCrudController<DTO
+        extends CoreDTO, JDO extends CoreJDO, ID, RP extends CoreRepository<JDO, ID>, S extends ICoreService<DTO, JDO, ID, RP>> {
 
     @Autowired
     private S service;
@@ -32,22 +31,22 @@ public class SimpleCrudController<DTO extends CoreDTO, JDO extends CoreJDO, ID, 
     }
 
     @GetMapping(ID_PATH_PARAM)
-    public ResponseEntity<DTO> getById(@PathVariable ID id) throws ResourceNotFoundException {
+    public ResponseEntity<DTO> getById(@PathVariable ID id) {
         return ResponseEntity.ok(service.get(id));
     }
 
     @PostMapping
-    public ResponseEntity<DTO> create(@RequestBody DTO req) throws ValidationException {
+    public ResponseEntity<DTO> create(@RequestBody DTO req) {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.create(req));
     }
 
     @PatchMapping(ID_PATH_PARAM)
-    public ResponseEntity<DTO> update(@PathVariable ID id, @RequestBody DTO dto) throws ResourceNotFoundException, ValidationException {
+    public ResponseEntity<DTO> update(@PathVariable ID id, @RequestBody DTO dto) {
         return ResponseEntity.ok(service.update(id, dto));
     }
 
     @DeleteMapping(ID_PATH_PARAM)
-    public void delete(@PathVariable ID id) throws ResourceNotFoundException {
+    public void delete(@PathVariable ID id) {
         service.delete(id);
     }
 
